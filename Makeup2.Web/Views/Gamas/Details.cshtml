@@ -1,0 +1,47 @@
+﻿@model Makeup2.Web.Models.Gama
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+    </dl>
+</div>
+<div class="col-md-12">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Paleta</th>
+                <th>Tiempo de caducidad</th>
+                <th>Marca</th>
+                <th>Gama</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Maquillajes)
+            {
+            <tr>
+                <th>@item.Paletas</th>
+                <th>@item.DateTime</th>
+                <th>@item.Marca</th>
+                <th>@item.Gama</th>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
