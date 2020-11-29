@@ -29,5 +29,7 @@ namespace Makeup2.Web.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Gama> Gama { get; set; }
+        public DbSet<Maquillaje> Maquillaje { get; set; }
     }
 }
