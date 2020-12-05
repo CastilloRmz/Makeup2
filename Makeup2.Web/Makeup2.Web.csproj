@@ -173,6 +173,7 @@
     <Compile Include="Controllers\GamasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MaquillajesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,6 +188,10 @@
     <Compile Include="Migrations\202011291426390_Start_Project1.cs" />
     <Compile Include="Migrations\202011291426390_Start_Project1.Designer.cs">
       <DependentUpon>202011291426390_Start_Project1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012041701281_UpdateUser.cs" />
+    <Compile Include="Migrations\202012041701281_UpdateUser.Designer.cs">
+      <DependentUpon>202012041701281_UpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -204,6 +209,10 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Img\Chica.jpg" />
+    <Content Include="Content\Img\Brochas.jpg" />
+    <Content Include="Content\Img\Principal.jpg" />
+    <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -247,6 +256,7 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -358,11 +368,15 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Gamas\Create.cshtml" />
     <Content Include="Views\Gamas\Delete.cshtml" />
     <Content Include="Views\Gamas\Details.cshtml" />
     <Content Include="Views\Gamas\Edit.cshtml" />
     <Content Include="Views\Gamas\Index.cshtml" />
+    <Content Include="Views\Maquillajes\Create.cshtml" />
+    <Content Include="Views\Maquillajes\Delete.cshtml" />
+    <Content Include="Views\Maquillajes\Details.cshtml" />
+    <Content Include="Views\Maquillajes\Edit.cshtml" />
+    <Content Include="Views\Maquillajes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -385,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011291426390_Start_Project1.resx">
       <DependentUpon>202011291426390_Start_Project1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012041701281_UpdateUser.resx">
+      <DependentUpon>202012041701281_UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

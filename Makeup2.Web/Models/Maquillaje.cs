@@ -10,7 +10,9 @@ namespace Makeup2.Web.Models
     public class Maquillaje
     {
         public int Id { get; set; }
+        public string ApplicationUser { get; set; }
         [Display(Name = "Paleta")]
+        [ForeignKey("ApplicationUser")]
         public ApplicationUser Paletas { get; set; }
         [Display(Name = "Tiempo que caduca")]
         public DateTime  DateTime { get; set; }
@@ -19,6 +21,7 @@ namespace Makeup2.Web.Models
         [Display(Name = "Gama")]
         public int GamaId { get; set; }
         [ForeignKey("GamaId")]
+        [Display(Name = "Gamas")]
         public Gama Gama { get; set; }
     }
 }
