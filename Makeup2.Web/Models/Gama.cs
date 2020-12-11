@@ -8,7 +8,7 @@ namespace Makeup2.Web.Models
         public int Id { get; set; }
         [Required]
         [MaxLength(150)]
-        [Display(Name ="Gama")]
+        [Display(Name ="Marca")]
        
         public string Tipo { get; set; }
         public ICollection<Maquillaje> Maquillajes { get; set; }

@@ -13,3 +13,11 @@
 .jumbotron {
     background-color: #F26AF6;
 }
+.gam {
+    background-image: url(Img/back-gamas.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.marc {
+    background-color: #F4A4F6;
+}

@@ -16,9 +16,9 @@ namespace Makeup2.Web.Models
         public ApplicationUser Paletas { get; set; }
         [Display(Name = "Tiempo que caduca")]
         public DateTime  DateTime { get; set; }
-        [Display(Name = "Marca")]
-        public string Marca { get; set; }
         [Display(Name = "Gama")]
+        public string Marca { get; set; }
+        [Display(Name = "Marcas")]
         public int GamaId { get; set; }
         [ForeignKey("GamaId")]
         [Display(Name = "Gamas")]
