@@ -21,3 +21,15 @@
 .marc {
     background-color: #F4A4F6;
 }
+.maqui {
+    background-image: url(Img/kim.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.inicioreg {
+    background-image: url(Img/logreg.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
