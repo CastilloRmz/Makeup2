@@ -27,6 +27,10 @@
                         <li class="nav-item"><a href="@Url.Action("Index","Gamas")" class="nav-link">Marcas</a></li>
                         <li class="nav-item"><a href="@Url.Action("Index","MAquillajes")" class="nav-link">Las mas destacado</a></li>
                     }
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <li class="nav-item"><a href="@Url.Action("Index","Roles")" class="nav-link">Roles</a></li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

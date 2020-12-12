@@ -1,3 +1,4 @@
+using Makeup2.Web.Clase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,15 @@ namespace Makeup2.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            this.CheckRoles();
+            Utility.CheckSuperUser();
+        }
+
+        private void CheckRoles()
+        {
+            Utility.CheckRoles("Administrator");
+            Utility.CheckRoles("Nadie");
+            Utility.CheckRoles("UsiarioX");
         }
     }
 }
