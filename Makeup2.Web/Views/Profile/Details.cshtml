@@ -1,0 +1,82 @@
+﻿@model Makeup2.Web.Models.ApplicationUser
+@{
+    ViewBag.Title = "Perfil";
+}
+@*Nombre, Correo, Email, Telefono, Descripcion,
+    Pasatiempos, musica, peliculas
+*@
+<p class="mt-3 pt-lg-5">
+<p class="mt-3 pt-lg-5">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header bg-principal">
+                    <h4 class="m-0 text-center">Perfil @User.Identity.Name</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <img src="~/Content/Img/NYX.jpg" alt="Picture" class="rounded img-fluid" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header py-2 bg-principal">
+                                    <b class="text-center m-0">Informacion Principal</b> <button class="btn btn-sm btn-outline-dark float-right">Editar</button>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td>Nombre</td>
+                                            <td>@Model.Name</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td>@Model.Email</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Usuario</td>
+                                            <td>@Model.UserName</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Telefono</td>
+                                            <td>@Model.PhoneNumber</td>
+                                        </tr>
+                                    </table>
+                                    <hr />
+                                    <table class="table table-sm table-borderless">
+                                        <tr>
+                                            <td>Descripcion</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Model.Descripcion</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Musica</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Model.Musica</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pasatiempos</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Model.Pasatiempos</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Videos</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Model.Videos</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>

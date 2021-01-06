@@ -16,6 +16,13 @@ namespace Makeup2.Web.Models
             // Agregar aquí notificaciones personalizadas de usuario
             return userIdentity;
         }
+
+        public string Name{get; set;}
+        public string Descripcion { get; set; }
+        public string Pasatiempos { get; set; }
+        public string Musica { get; set; }
+        public string Videos { get; set; }
+        public string Photo { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
