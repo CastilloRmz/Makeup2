@@ -29,6 +29,15 @@ namespace Makeup2.Web.Clase
                 CreateSuperUser("superuser@mail.com", "Admin_123",null, "Administrator");
             }
         }
+        internal static void CheckUser()
+        {
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            var User = UserManager.FindByName("*.*");
+            if (User == null)
+            {
+                CreateUser(null, null, null, "UsuarioX");
+            }
+        }
 
         private static void CreateSuperUser(string email, string password, string phone, string rol)
         {
@@ -41,6 +50,18 @@ namespace Makeup2.Web.Clase
             };
             UserManager.Create(user, password);
             UserManager.AddToRole(user.Id,rol);
+        }
+        private static void CreateUser(string email, string password, string phone, string rol)
+        {
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            var user = new ApplicationUser()
+            {
+                UserName = email,
+                Email = email,
+                PhoneNumber = phone
+            };
+            UserManager.Create(user, password);
+            UserManager.AddToRole(user.Id, rol);
         }
         public void Dispose()
         {

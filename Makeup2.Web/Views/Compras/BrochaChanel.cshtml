@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "BrochaChanel";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Makeup Forever</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/Content/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="container">
+        <nav class="navbar navbar-dark bg-principal fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href=""><img src="~/Content/Img/Logo.png" width="100" height="75" />@Html.ActionLink("MakeUp Forever", "Index", "Home", null, new { @class = "nav-link" })</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item"><a href="@Url.Action("Index","Gamas")" class="nav-link">Marcas</a></li>
+                            <li class="nav-item"><a href="@Url.Action("Index","MAquillajes")" class="nav-link">Las mas destacado</a></li>
+                        }
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <li class="nav-item"><a href="@Url.Action("Index","Roles")" class="nav-link">Roles</a></li>
+                        }
+
+
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- Page Content -->
+        <!-- /.col-lg-3 -->
+        <p class="pt-5">
+            <div class="col-lg-9">
+                <div class="row">
+                    <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img class="d-block img-fluid" src="~/Content/Img/brochaschanel.jpg" width="800" height="300" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="~/Content/Img/brochasblancas.jpg" width="800" height="300" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="~/Content/Img/chenel.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.col-lg-9 -->
+
+        <p class="pt-5"></p>
+        <div class="row">
+            <div class="card">
+                <div class="card-header">
+                    <div class="col-lg-6">
+                        <h3 class="text-black-50">Brochas Chanel</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tr>
+                                <th>
+                                    <h2>Juego de brochas de maquillaje (10 unidades, color negro, bolsa de piel.</h2>
+                                </th>
+                                <th>
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2>$1900.00</h2>
+                                </td>
+                                <td>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                    <a href="#" data-toggle="modal" data-target="#AddModal" class="btn btn-sm bg-principal text-black">Comprar</a>
+                                    }
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="pt-5"></p>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-principal">
+        <div class="container">
+            <p class="m-0 text-center text-black">Cosmeticos &copy; 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="~/Scripts/scripts.js"></script>
+
+    <div class="modal fade" id="AddModal" tabindex="-1" role="dialog" aria-labelledby="AddModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-principal">
+                    <h5 class="modal-title text-black" id="exampleModalLabel">¿Desea confirmar la compra?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary bg-principal" data-toggle="modal" data-target="#bd-example-modal-sm">Confirmar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade bd-example-modal-sm bg-principal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="bd-example-modal-sm">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <h6>Se realizo su compra con exito</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

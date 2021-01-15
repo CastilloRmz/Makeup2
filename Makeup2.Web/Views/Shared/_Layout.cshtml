@@ -24,12 +24,12 @@
                     <li class="nav-item">@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = "nav-link" })</li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li class="nav-item"><a href="@Url.Action("Index","Gamas")" class="nav-link">Marcas</a></li>
-                        <li class="nav-item"><a href="@Url.Action("Index","MAquillajes")" class="nav-link">Las mas destacado</a></li>
+                        <li class="nav-item"><a href="@Url.Action("Index","Gamas")" class="nav-link text-black">Marcas</a></li>
+                        <li class="nav-item"><a href="@Url.Action("Index","MAquillajes")" class="nav-link text-black">Las mas destacado</a></li>
                     }
                     @if (User.IsInRole("Administrator"))
                     {
-                        <li class="nav-item"><a href="@Url.Action("Index","Roles")" class="nav-link">Roles</a></li>
+                        <li class="nav-item"><a href="@Url.Action("Index","Roles")" class="nav-link  text-black">Roles</a></li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

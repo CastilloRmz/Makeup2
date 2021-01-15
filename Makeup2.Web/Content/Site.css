@@ -3,7 +3,7 @@
     padding:0;
 }
 .bg-principal {
-    background-color: #F26AF6;
+    background-color: #F9D6E6;
 }
 .back{
     background-image: url(../Content/makeup.jpg);
@@ -32,4 +32,7 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.bg-prinks {
+    background-color: #F9D6E6;
 }
